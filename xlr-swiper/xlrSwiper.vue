@@ -68,7 +68,7 @@
         if (this.banner.length > 0)
           this.xSwiper()
         this.isTime = true
-      }, 1000)
+      }, 1500)
     },
     methods: {
       xSwiper() {
@@ -105,7 +105,7 @@
           }, this.timeout)
         }
       },
-      getXlrSwipers() {
+      getXlrSwipers(callback) {
         let time
         time = setInterval(() => {
           let wrapperleft = 0;
@@ -118,10 +118,15 @@
           if (this.wrappers.style.left === this.index * -this.wrappersWidth + "px") {
             clearInterval(time, time = null)
           }
-          if (this.index === this.xlrSwipeLength + 1) this.isActive = 0
-          if (this.index === this.xlrSwipeLength + 1 && time === null) {
-            this.index = 1
-            this.wrappers.style.left = -this.wrappersWidth + "px"
+
+          if (callback) {
+            callback(time)
+          } else {
+            if (this.index === this.xlrSwipeLength + 1) {
+              this.isActive = 0
+              this.index = 1
+              this.wrappers.style.left = 0 + "px"
+            }
           }
           if (this.index === 0) {
             this.isActive = this.xlrSwipeLength - 1
@@ -156,7 +161,14 @@
               this.index = Math.round(-left / (this.wrappersWidth - this.dataPullLenght)) :
               this.index = Math.round(-left / (this.wrappersWidth + this.dataPullLenght));
           this.isActive = this.index - 1
-          this.getXlrSwipers()
+
+          this.getXlrSwipers((time) => {
+            if (this.index === this.xlrSwipeLength + 1) this.isActive = 0
+            if (this.index === this.xlrSwipeLength + 1 && time === null) {
+              this.index = 1
+              this.wrappers.style.left = -this.wrappersWidth + "px"
+            }
+          })
           if (this.autoSwiper) {
             this.timer = setInterval(() => {
               this.isActive = this.index
