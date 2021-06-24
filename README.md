@@ -25,6 +25,14 @@ xlrswiper
                 <img :src="item.image" alt="">
             </xlr-swiper-item>
     </xlr-swiper>
+    
+参数说明
+-------
+    字段名            字段类型       默认值       说明
+    autoSwiper       Boolean        false       开启自动轮播
+    timeout          Number         3000        轮播时间间隔
+    
+    
 
    
 
