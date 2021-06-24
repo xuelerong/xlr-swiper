@@ -38,11 +38,11 @@ xlrswiper
     
     clickIndicator   Boolean        false       开启底部指示器点击功能
      
-    speedImg         Number         6           控制轮播速度
+    speedImg         Number         6           控制轮播速度 取值范围 1 ~ 10
     
     openPull         Boolean        false       开启拖拽
     
-    pullLenght       Number         0           控制拖拽距离
+    pullLenght       Number         0           控制拖拽距离 取值范围 0 ~ 40
      
     xxxxxxxx         xxxxxx         1           speedImg为1 翻页轮播
     
