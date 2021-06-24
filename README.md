@@ -34,6 +34,18 @@ xlrswiper
         
     timeout          Number         3000        轮播时间间隔
     
+    playIndicator    Boolean        false       显示底部指示器
+    
+    clickIndicator   Boolean        false       开启底部指示器点击功能
+     
+    speedImg         Number         6           控制轮播速度
+    
+    openPull         Boolean        false       开启拖拽
+    
+    pullLenght       Number         0           控制拖拽距离
+     
+    xxxxxxxx         xxxxxx         1           speedImg为1 翻页轮播
+    
     
 
    
