@@ -7,13 +7,13 @@ xlrswiper
 
 安装
 -------
-    npm install xlrswiper
+    npm `install` xlrswiper
     
 快速上手
 -------
     import Vue from "vue"
-    import {xlrswiper,xlrswiperitem} from 'xlrswiper'
-    import "xlrswiper/style/xlr-swiper.css"
+    import {xlrswiper,xlrswiperitem} from '`xlrswiper`'
+    import "`xlrswiper/style/xlr-swiper.css`"
     
     Vue.use(xlrswiper)
     Vue.use(xlrswiperitem)
