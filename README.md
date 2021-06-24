@@ -5,6 +5,7 @@ xlrswiper
 * 作者邮箱：2643671876@qq.com
 * github地址：https://github.com/xuelerong/xlr-swiper
 
-#安装
-```npm install xlrswiper
+# 安装
+```
+npm install xlrswiper
 
